@@ -1,4 +1,4 @@
-;;; setup: projectile
+;; setup: projectile
 (use-package projectile
   :ensure t
   :init (progn
