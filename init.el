@@ -1,29 +1,38 @@
+;;; package --- Summary"
 ;;; Code:
 ;;; Commentary:
-;;; package --- Summary"
 
 (package-initialize)
-(defconst +emacs-dir+ (getenv "EMACS_HOME"))
-(defconst +emacs-profiles-dir+ (concat +emacs-dir+ "/profiles"))
-(defconst +emacs-conf-dir+ (concat +emacs-dir+ "/config"))
-(defconst +emacs-tmp-dir+ (concat +emacs-dir+ "/tmp"))
-(defconst +emacs-snippets-dir+ (concat +emacs-dir+ "/snippets"))
 
-(defun add-load-path (p)
-  (add-to-list 'load-path (concat +emacs-dir+ "/" p)))
-(defun add-lib-path (p)
-  (add-to-list 'load-path (concat +emacs-lib-dir+ "/" p)))
-(defun load-conf-file (f)
-  (load-file (concat +emacs-conf-dir+ "/" f ".el")))
-(defun load-profile (p)
-  (load-file (concat +emacs-profiles-dir+ "/" p ".el")))
+(defvar emacs-dir (file-name-directory load-file-name)
+  "The root dir of the Emacs.")
+(defvar emacs-configs-dir (expand-file-name "configs" emacs-dir))
+(defvar emacs-profiles-dir (expand-file-name "profiles" emacs-dir))
 
-(defun load-customizations ()
-  (let ((filename (concat +emacs-dir+ "/custom.el")))
-    (if (file-readable-p filename)
-        (load-file filename))))
+(defun add-load-path (path)
+  (add-to-list 'load-path (concat emacs-dir "/" path)))
 
-(add-load-path "")
+(defun load-config (path)
+  (load-file (concat emacs-configs-dir "/" path ".el")))
+
+(defun load-profile (path)
+  (load-file (concat emacs-profiles-dir "/" path ".el")))
+
 (load-profile "default")
+(load-profile "custom")
+(load-profile "windows")
 
-(load-customizations)
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   (quote
+    (zenburn-theme json-mode yaml-mode dockerfile-mode helm-projectile projectile helm-ag ag helm-swoop helm-flycheck flycheck helm-company company magit use-package))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
