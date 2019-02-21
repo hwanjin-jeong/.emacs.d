@@ -19,6 +19,7 @@
 (load-config "counsel")
 (load-config "windmove")
 (load-config "expand-region")
+(load-config "projectile")
 
 (global-set-key (kbd "M-m") 'shell)
 (global-set-key (kbd "C-c C-n") 'next-buffer)
