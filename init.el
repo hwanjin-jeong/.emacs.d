@@ -19,7 +19,6 @@
   (load-file (concat emacs-profiles-dir "/" path ".el")))
 
 (load-profile "default")
-(load-profile "custom")
 (load-profile "windows")
 
 (custom-set-variables
@@ -29,7 +28,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (zenburn-theme json-mode yaml-mode dockerfile-mode helm-projectile projectile helm-ag ag helm-swoop helm-flycheck flycheck helm-company company magit use-package))))
+    (linum-relative counsel zenburn-theme json-mode yaml-mode dockerfile-mode helm-projectile projectile helm-ag ag helm-swoop helm-flycheck flycheck helm-company company magit use-package))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

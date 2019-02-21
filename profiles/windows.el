@@ -9,18 +9,21 @@
   :init
   (load-theme 'sanityinc-tomorrow-bright t))
 
+(load-config "line")
+
 ;; remove top menu bar
 (menu-bar-mode -1)
 
 ;;; key mappings
+(load-config "helm")
+(load-config "counsel")
 (load-config "windmove")
 (load-config "expand-region")
-(load-config "helm")
 
+(global-set-key (kbd "M-m") 'shell)
 (global-set-key (kbd "C-c C-n") 'next-buffer)
 (global-set-key (kbd "C-c C-p") 'previous-buffer)
-
-
+(global-set-key [(control ?h)] 'delete-backward-char)
 
 ;; share osx clipboard
 (defun copy-from-osx ()
@@ -32,7 +35,3 @@
       (process-send-eof proc))))
 (setq interprogram-cut-function 'paste-to-osx)
 (setq interprogram-paste-function 'copy-from-osx)
-
-;; linum config
-;; (require 'linum-relative)
-;; (linum-relative-global-mode t)
