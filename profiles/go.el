@@ -5,9 +5,8 @@
 
 (use-package go-mode
   :ensure t
-  :init (progn
-	  (shell-command "go get github.com/sourcegraph/go-langserver")
-	  (shell-command "go get golang.org/x/tools/cmd/goimports")))
+  :init (progn (shell-command "go get github.com/sourcegraph/go-langserver")
+	       (shell-command "go get golang.org/x/tools/cmd/goimports")))
 
 (defun my-go-mode-hook ()
   (setq gofmt-command "goimports")

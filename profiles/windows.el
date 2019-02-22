@@ -9,8 +9,6 @@
   :init
   (load-theme 'sanityinc-tomorrow-bright t))
 
-(load-config "line")
-
 ;; remove top menu bar
 (menu-bar-mode -1)
 
@@ -36,3 +34,5 @@
       (process-send-eof proc))))
 (setq interprogram-cut-function 'paste-to-osx)
 (setq interprogram-paste-function 'copy-from-osx)
+
+(load-config "git")
