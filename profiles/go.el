@@ -3,12 +3,6 @@
 ;;; Commentary:
 ;;; setup theme, key mappings, and windows
 
-
-(use-package eglot
-  :hook (prog-mode . eglot-ensure)
-  :config (progn 
-	    (add-to-list 'eglot-server-programs '())))
-
 (use-package go-mode
   :ensure t
   :init (progn (shell-command "go get github.com/sourcegraph/go-langserver")

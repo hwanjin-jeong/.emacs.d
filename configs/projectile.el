@@ -1,5 +1,6 @@
 ;; setup: projectile
 (require 'helm)
+(require 'ag)
 (use-package projectile
   :ensure t
   :init (progn (projectile-mode))

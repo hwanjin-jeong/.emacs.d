@@ -23,6 +23,8 @@
 (global-set-key (kbd "C-c C-n") 'next-buffer)
 (global-set-key (kbd "C-c C-p") 'previous-buffer)
 (global-set-key [(control ?h)] 'delete-backward-char)
+(global-set-key (kbd "C-M-i") 'completion-at-point)
+
 
 ;; share osx clipboard
 (defun copy-from-osx ()

@@ -20,6 +20,7 @@
 
 (load-profile "default")
 (load-profile "windows")
+(load-profile "programming")
 (load-profile "go")
 
 (custom-set-variables
@@ -29,7 +30,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (eglot gotest go-mode counsel helm-projectile projectile helm-ag ag use-package))))
+    (company-go company eglot gotest go-mode counsel helm-projectile projectile helm-ag ag use-package))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
