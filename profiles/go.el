@@ -1,7 +1,6 @@
 ;;; package --- Summary"
 ;;; Code:
 ;;; Commentary:
-;;; setup theme, key mappings, and windows
 
 (use-package go-mode
   :ensure t
@@ -10,7 +9,6 @@
 
 (defun my-go-mode-hook ()
   (setq gofmt-command "goimports")
-  ;;(require 'go-mode-autoloads)
   (add-hook 'before-save-hook 'gofmt-before-save)
   (use-package gotest
     :ensure t
@@ -18,7 +16,11 @@
     (setq go-test-verbose t)
     (local-set-key (kbd "C-c t t") 'go-test-current-test)
     (local-set-key (kbd "C-c t f") 'go-test-current-file)
-    (local-set-key (kbd "C-c t p") 'go-test-current-project))
+    (local-set-key (kbd "C-c t p") 'go-test-current-project)
+    (local-set-key (kbd "C-c d") 'xref-find-definitions)
+    (local-set-key (kbd "C-c C-d") 'xref-find-definitions-other-window)
+    (local-set-key (kbd "C-c C-c") 'xref-pop-marker-stack)
+    (local-set-key (kbd "C-c C-s") 'xref-find-references))
   (set (make-local-variable 'compile-command)
        "go build -v && go test -v && go vet"))
 
@@ -29,3 +31,4 @@
 			 (setq tab-width 2) 
 			 (setq standard-indent 2) 
 			 (setq indent-tabs-mode 1)))
+

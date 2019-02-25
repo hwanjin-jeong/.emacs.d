@@ -25,3 +25,6 @@
   :bind (("M-x" . helm-M-x)
          ("C-x b" . helm-mini)
          ("M-y" . helm-show-kill-ring)))
+
+(require 'helm-xref)
+(setq xref-show-xrefs-function 'helm-xref-show-xrefs)
