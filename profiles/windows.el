@@ -18,6 +18,7 @@
 (load-config "windmove")
 (load-config "expand-region")
 (load-config "projectile")
+(load-config "avy")
 
 (global-set-key (kbd "M-m") 'shell)
 (global-set-key (kbd "C-c C-n") 'next-buffer)
