@@ -15,3 +15,7 @@
 	  (use-package company-go)
 	  (add-hook 'after-init-hook 'global-company-mode)))
 
+(use-package smartparens
+  :ensure t
+  :hook (prog-mode . smartparens-mode)
+  :config (setq smartparens-global-mode 1))
