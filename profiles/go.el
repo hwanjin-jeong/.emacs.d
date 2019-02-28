@@ -17,6 +17,7 @@
     (local-set-key (kbd "C-c t t") 'go-test-current-test)
     (local-set-key (kbd "C-c t f") 'go-test-current-file)
     (local-set-key (kbd "C-c t p") 'go-test-current-project)
+    (local-set-key (kbd "C-c C-r") 'go-run)
     (local-set-key (kbd "C-c d") 'xref-find-definitions)
     (local-set-key (kbd "C-c C-d") 'xref-find-definitions-other-window)
     (local-set-key (kbd "C-c C-c") 'xref-pop-marker-stack)
