@@ -26,5 +26,6 @@
          ("C-x b" . helm-mini)
          ("M-y" . helm-show-kill-ring)))
 
-(require 'helm-xref)
-(setq xref-show-xrefs-function 'helm-xref-show-xrefs)
+(use-package helm-xref
+  :ensure t
+  :init (setq xref-show-xrefs-function 'helm-xref-show-xrefs))

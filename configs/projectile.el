@@ -1,9 +1,11 @@
 ;; setup: projectile
 (require 'helm)
-(require 'ag)
+
 (use-package projectile
   :ensure t
-  :init (progn (projectile-mode))
+  :init (progn (projectile-mode)
+	       (use-package ag
+		 :ensure t))
   :config (progn
             (setq projectile-enable-caching nil)
 	    (setq projectile-completion-system 'helm))
