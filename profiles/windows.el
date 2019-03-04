@@ -12,6 +12,27 @@
 ;; remove top menu bar
 (menu-bar-mode -1)
 
+;;; custom function
+(defun open-next-line (arg)
+  "Move to the next line and then opens a line.
+    See also `newline-and-indent'."
+  (interactive "p")
+  (end-of-line)
+  (open-line arg)
+  (next-line 1)
+  (when newline-and-indent
+    (indent-according-to-mode)))
+
+(defun open-previous-line (arg)
+  "Open a new line before the current one. 
+     See also `newline-and-indent'."
+  (interactive "p")
+  (beginning-of-line)
+  (open-line arg)
+  (when newline-and-indent
+    (indent-according-to-mode)))
+
+
 ;;; key mappings
 (load-config "helm")
 (load-config "counsel")
@@ -25,7 +46,8 @@
 (global-set-key (kbd "C-c C-p") 'previous-buffer)
 (global-set-key [(control ?h)] 'delete-backward-char)
 (global-set-key (kbd "C-M-i") 'completion-at-point)
-
+(global-set-key (kbd "M-n") 'open-next-line)
+(global-set-key (kbd "M-p") 'open-previous-line)
 
 ;; share osx clipboard
 (defun copy-from-osx ()
