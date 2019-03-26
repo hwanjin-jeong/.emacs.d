@@ -22,6 +22,7 @@
 (load-profile "windows")
 (load-profile "programming")
 (load-profile "go")
+(load-profile "web")
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -30,7 +31,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (restclient smartparens avy company-go company eglot gotest go-mode counsel helm-projectile projectile helm-ag ag use-package)))
+    (direnv typescript-mode multiple-cursors groovy-mode yaml-mode restclient smartparens avy company-go company eglot gotest go-mode counsel helm-projectile projectile helm-ag ag use-package)))
  '(safe-local-variable-values (quote ((url-max-redirections . 0)))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.

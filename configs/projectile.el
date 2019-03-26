@@ -10,5 +10,7 @@
             (setq projectile-enable-caching nil)
 	    (setq projectile-completion-system 'helm))
   :bind (("C-c p f" . projectile-find-file)
-	 ("C-c p s" . projectile-ag)))
+	 ("C-c p s" . projectile-ag)
+	 ("C-c p p" . projectile-switch-project)))
+
 

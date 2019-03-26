@@ -25,3 +25,8 @@
   :config (setq smartparens-global-mode 1))
 
 (load-config "restclient")
+
+(global-set-key (kbd "C-c d") 'xref-find-definitions)
+(global-set-key (kbd "C-c C-d") 'xref-find-definitions-other-window)
+(global-set-key (kbd "C-c C-c") 'xref-pop-marker-stack)
+(global-set-key (kbd "C-c C-s") 'xref-find-references)

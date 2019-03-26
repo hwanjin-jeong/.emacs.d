@@ -25,7 +25,9 @@
 (global-set-key (kbd "C-c C-p") 'previous-buffer)
 (global-set-key [(control ?h)] 'delete-backward-char)
 (global-set-key (kbd "C-M-i") 'completion-at-point)
+(define-key key-translation-map (kbd "C-h") (kbd "<DEL>"))
 
+(global-set-key (kbd "C-c m c") 'mc/edit-lines)
 
 ;; share osx clipboard
 (defun copy-from-osx ()
@@ -39,3 +41,7 @@
 (setq interprogram-paste-function 'copy-from-osx)
 
 (load-config "git")
+
+(use-package direnv
+  :ensure t
+  :config (direnv-mode))
