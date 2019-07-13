@@ -11,6 +11,7 @@
   (setq flycheck-check-syntax-automatically '(save mode-enabled))
   (eldoc-mode +1)
   (tide-hl-identifier-mode +1)
+  (tide-completion-enable-autoimport-suggestions t)
   ;; company is an optional dependency. You have to
   ;; install it separately via package-install
   ;; `M-x package-install [ret] company`
@@ -37,6 +38,8 @@
   :ensure t
   :mode (("\\.html?\\'" . web-mode)
          ("\\.tsx\\'" . web-mode)
+         ("\\.ts\\'" . web-mode)
+         ("\\.js\\'" . web-mode)
          ("\\.jsx\\'" . web-mode))
   :config
   (setq web-mode-markup-indent-offset 2
@@ -69,4 +72,7 @@
   :after (typescript-mode company flycheck)
   :hook ((typescript-mode . tide-setup)
          (typescript-mode . tide-hl-identifier-mode)
-         (before-save . tide-format-before-save)))
+         (before-save . tide-format-before-save))
+  :bind (("C-c f" . tide-jump-to-implementation)
+	 ("C-c d" . tide-jump-to-definition)
+	 ("C-c C-c" . tide-jump-back)))
