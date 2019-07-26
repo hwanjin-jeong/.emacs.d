@@ -48,7 +48,6 @@
 (global-set-key (kbd "C-M-i") 'completion-at-point)
 
 (define-key key-translation-map (kbd "C-h") (kbd "<DEL>"))
-
 (global-set-key (kbd "C-c m c") 'mc/edit-lines)
 (global-set-key (kbd "M-n") 'open-next-line)
 (global-set-key (kbd "M-p") 'open-previous-line)
