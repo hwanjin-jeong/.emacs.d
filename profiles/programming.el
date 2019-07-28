@@ -9,6 +9,12 @@
 ;;   :config (progn 
 ;; 	    (add-to-list 'eglot-server-programs '())))
 
+(use-package lsp-mode
+  :config
+  (add-hook 'python-mode-hook #'lsp)
+  (add-hook 'kotlin-mode-hook #'lsp)
+  )
+
 (use-package company
   :ensure t
   :init (progn

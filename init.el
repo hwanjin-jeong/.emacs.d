@@ -31,7 +31,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (kotlin-mode eww-lnum magit-gitflow helm-ghq ghq docker docker-compose-mode dockerfile-mode direnv typescript-mode multiple-cursors groovy-mode yaml-mode restclient smartparens avy company-go company eglot gotest go-mode counsel helm-projectile projectile helm-ag ag use-package)))
+    (spinner lsp-mode kotlin-mode eww-lnum magit-gitflow helm-ghq ghq docker docker-compose-mode dockerfile-mode direnv typescript-mode multiple-cursors groovy-mode yaml-mode restclient smartparens avy company-go company eglot gotest go-mode counsel helm-projectile projectile helm-ag ag use-package)))
  '(safe-local-variable-values (quote ((url-max-redirections . 0)))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
