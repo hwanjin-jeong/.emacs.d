@@ -3,11 +3,11 @@
 ;;; Commentary:
 ;;; setup theme, key mappings, and windows
 
-(use-package eglot
-  :ensure t
-  :hook (prog-mode . eglot-ensure)
-  :config (progn 
-	    (add-to-list 'eglot-server-programs '())))
+;; (use-package eglot
+;;   :ensure t
+;;   :hook (prog-mode . eglot-ensure)
+;;   :config (progn 
+;; 	    (add-to-list 'eglot-server-programs '())))
 
 (use-package company
   :ensure t
