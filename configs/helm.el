@@ -52,3 +52,7 @@
       (setq projectile-completion-system 'helm)
       (setq projectile-indexing-method 'alien))))
 
+
+(use-package helm-xref
+  :ensure t
+  :init (setq xref-show-xrefs-function 'helm-xref-show-xrefs))
