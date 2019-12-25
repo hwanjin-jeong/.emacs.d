@@ -5,6 +5,7 @@
 
 (require 'package)
 (set-default-coding-systems 'utf-8)
+(setq gnutls-algorithm-priority "NORMAL:-VERS-TLS1.3")
 (add-to-list 'package-archives
              '("melpa" . "https://melpa.org/packages/") t)
 (add-to-list 'package-archives
