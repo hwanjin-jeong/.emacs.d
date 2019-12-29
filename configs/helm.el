@@ -47,11 +47,11 @@
     (helm-mode 1)
 
     (use-package helm-projectile
+      :ensure t
       :init
       (setq helm-projectile-on 1)
       (setq projectile-completion-system 'helm)
       (setq projectile-indexing-method 'alien))))
-
 
 (use-package helm-xref
   :ensure t

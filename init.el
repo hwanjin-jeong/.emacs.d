@@ -23,6 +23,7 @@
 (load-profile "programming")
 (load-profile "go")
 (load-profile "web")
+(load-profile "docker")
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
