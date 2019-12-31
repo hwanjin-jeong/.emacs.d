@@ -20,8 +20,8 @@
 
 (load-profile "default")
 (load-profile "windows")
-(load-profile "programming")
-(load-profile "go")
+(load-profile "lsp")
+(load-profile "golang")
 (load-profile "web")
 (load-profile "docker")
 
