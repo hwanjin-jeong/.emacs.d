@@ -3,10 +3,6 @@
 ;;; Commentary:
 ;;; setup theme, key mappings, and windows
 
-(load-config "helm")
-(load-config "projectile")
-(load-config "git")
-
 ;;; theme
 (use-package color-theme-sanityinc-tomorrow
   :ensure t
