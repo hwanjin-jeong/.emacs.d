@@ -15,15 +15,14 @@
 (defun load-config (path)
   (load-file (concat emacs-configs-dir "/" path ".el")))
 
-(defun load-profile (path)
-  (load-file (concat emacs-profiles-dir "/" path ".el")))
-
-(load-profile "default")
-(load-profile "windows")
-(load-profile "lsp")
-(load-profile "golang")
-(load-profile "web")
-(load-profile "docker")
+(load-config "default")
+(load-config "helm")
+(load-config "git")
+(load-config "windows")
+(load-config "lsp")
+(load-config "golang")
+(load-config "web")
+(load-config "docker")
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
