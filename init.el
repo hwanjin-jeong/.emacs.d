@@ -23,6 +23,7 @@
 (load-config "golang")
 (load-config "web")
 (load-config "docker")
+(load-config "restclient")
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -31,7 +32,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (company-terraform gitignore-mode terraform-mode php-mode treemacs lsp-java lsp-mode kotlin-mode magit-gitflow docker-compose-mode dockerfile-mode direnv typescript-mode multiple-cursors groovy-mode yaml-mode smartparens avy company eglot gotest go-mode helm-projectile projectile helm-ag ag use-package)))
+    (restclient company-terraform gitignore-mode terraform-mode php-mode treemacs lsp-java lsp-mode kotlin-mode magit-gitflow docker-compose-mode dockerfile-mode direnv typescript-mode multiple-cursors groovy-mode yaml-mode smartparens avy company eglot gotest go-mode helm-projectile projectile helm-ag ag use-package)))
  '(safe-local-variable-values (quote ((url-max-redirections . 0)))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -39,3 +40,4 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+(put 'set-goal-column 'disabled nil)
