@@ -24,6 +24,7 @@
 (load-config "web")
 (load-config "docker")
 (load-config "restclient")
+(load-config "yasnippet")
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
