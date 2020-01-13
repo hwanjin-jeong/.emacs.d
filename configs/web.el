@@ -47,7 +47,6 @@
         web-mode-code-indent-offset 2
         web-mode-block-padding 2
         web-mode-comment-style 2
-
         web-mode-enable-css-colorization t
         web-mode-enable-auto-pairing t
         web-mode-enable-comment-keywords t
@@ -57,6 +56,9 @@
             (lambda ()
               (when (string-equal "tsx" (file-name-extension buffer-file-name))
 		(setup-tide-mode))))
+  (add-hook 'web-mode-hook
+          (lambda ()
+            (yas-activate-extra-mode 'tide)))
   ;; enable typescript-tslint checker
   (flycheck-add-mode 'typescript-tslint 'web-mode))
 
