@@ -1,0 +1,21 @@
+# -*- mode: snippet -*-
+# name: functionalComponent
+# key: functionalComponent
+# --
+import * as React from 'react';
+
+interface $1Props {
+  
+};
+
+function $1({}: $1Props) {
+  return (
+  
+  );
+}
+
+$1.defaultProps = {
+
+};
+
+export default $1;

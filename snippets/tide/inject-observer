@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name: inject-observer
+# key: inject-observer
+# --
+import { inject, observer } from 'mobx-react';
+import { $1 } from 'stores/$1';
+
+@inject('$1')
+@observer
+$0

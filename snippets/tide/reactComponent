@@ -1,0 +1,14 @@
+# -*- mode: snippet -*-
+# name: reactComponent
+# key: reactComponent
+# --
+import * as React from 'react';
+
+export default class $1 extends React.Component<{}> {
+  render() {
+    return (
+       $2
+    )
+  }
+}
+$0
