@@ -42,8 +42,7 @@
 
 (use-package smartparens
   :ensure t
-  :hook (prog-mode . smartparens-mode)
-  :config (setq smartparens-global-mode 1))
+  :config (smartparens-global-mode 1))
 
 ;; for java
 (use-package company-lsp :ensure t)
