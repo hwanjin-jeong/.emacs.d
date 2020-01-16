@@ -40,10 +40,6 @@
   (setq company-dabbrev-downcase 0)
   (setq company-idle-delay 0.5))
 
-(use-package smartparens
-  :ensure t
-  :config (smartparens-global-mode 1))
-
 ;; for java
 (use-package company-lsp :ensure t)
 (use-package lsp-ui :ensure t)
@@ -51,6 +47,10 @@
   :config
   (add-hook 'java-mode-hook 'lsp)
   (add-hook 'kotlin-mode-hook 'lsp))
+
+(use-package smartparens
+  :ensure t
+  :config (smartparens-global-mode 1))
 
 ;; Key mappings
 ;; (global-set-key (kbd "C-c d") 'xref-find-definitions)
