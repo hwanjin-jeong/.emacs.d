@@ -40,12 +40,14 @@
     (indent-according-to-mode)))
 
 ;;; key mappings
+
+(global-set-key (kbd "C-s") 'isearch-forward-regexp)
+
 (global-set-key (kbd "M-m") 'shell)
 (global-set-key (kbd "C-c C-n") 'next-buffer)
 (global-set-key (kbd "C-c C-p") 'previous-buffer)
 (global-set-key [(control ?h)] 'delete-backward-char)
 (global-set-key (kbd "C-M-i") 'completion-at-point)
-
 (define-key key-translation-map (kbd "C-h") (kbd "<DEL>"))
 (global-set-key (kbd "M-n") 'open-next-line)
 (global-set-key (kbd "M-p") 'open-previous-line)
