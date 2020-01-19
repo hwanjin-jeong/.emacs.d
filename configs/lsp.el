@@ -52,6 +52,9 @@
   :ensure t
   :config (smartparens-global-mode 1))
 
+(use-package iedit
+  :ensure t)
+
 ;; Key mappings
 ;; (global-set-key (kbd "C-c d") 'xref-find-definitions)
 ;; (global-set-key (kbd "C-c C-d") 'xref-find-definitions-other-window)

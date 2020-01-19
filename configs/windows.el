@@ -42,8 +42,10 @@
 ;;; key mappings
 
 (global-set-key (kbd "C-s") 'isearch-forward-regexp)
+(global-set-key (kbd "M-%") 'query-replace-regexp)
 
 (global-set-key (kbd "M-m") 'shell)
+
 (global-set-key (kbd "C-c C-n") 'next-buffer)
 (global-set-key (kbd "C-c C-p") 'previous-buffer)
 (global-set-key [(control ?h)] 'delete-backward-char)

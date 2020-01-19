@@ -50,8 +50,8 @@
         web-mode-enable-css-colorization t
         web-mode-enable-auto-pairing t
         web-mode-enable-comment-keywords t
-        web-mode-enable-current-element-highlight t
-        )
+        web-mode-enable-current-element-highlight t)
+
   (sp-pair "<" ">")
   (add-hook 'web-mode-hook
             (lambda ()
@@ -59,7 +59,9 @@
 		(setup-tide-mode))))
   (add-hook 'web-mode-hook
           (lambda ()
-            (yas-activate-extra-mode 'tide)))
+            (yas-activate-extra-mode 'tide)
+	    (subword-mode)
+	    (setq er/enable-subword-mode\? t)))
   ;; enable typescript-tslint checker
   (flycheck-add-mode 'typescript-tslint 'web-mode))
 
