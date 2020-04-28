@@ -579,9 +579,9 @@ Optional argument STAY-IN-WINDOW do not move focus to response buffer if t."
 
 (defvar restclient-mode-map
   (let ((map (make-sparse-keymap)))
-    (define-key map (kbd "C-c C-c") 'restclient-http-send-current)
+    (define-key map (kbd "C-c C-v") 'restclient-http-send-current)
     (define-key map (kbd "C-c C-r") 'restclient-http-send-current-raw)
-    (define-key map (kbd "C-c C-v") 'restclient-http-send-current-stay-in-window)
+    (define-key map (kbd "C-c C-c") 'restclient-http-send-current-stay-in-window)
     (define-key map (kbd "C-c C-n") 'restclient-jump-next)
     (define-key map (kbd "C-c C-p") 'restclient-jump-prev)
     (define-key map (kbd "C-c C-.") 'restclient-mark-current)
